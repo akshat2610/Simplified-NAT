@@ -73,7 +73,7 @@ void match(unordered_map<string, string> &NAT, list<string> &flow){
     string full_key = *flow_iter;
     //If complete ip:port pair found --> write to output stream
     if (NAT.find(full_key) != NAT.end())
-      output_stream << full_key << "->" << NAT.at(full_key) << endl;
+      output_stream << full_key << " -> " << NAT.at(full_key) << endl;
     //Else if not found --> look for either ip or pair
     else{
       size_t colon_pos = full_key.find(":");
@@ -81,9 +81,9 @@ void match(unordered_map<string, string> &NAT, list<string> &flow){
       string port_part = full_key.substr(colon_pos+1);
 
       if (NAT.find(ip_part) != NAT.end())
-        output_stream << full_key << "->" << NAT.at(ip_part) << endl;
+        output_stream << full_key << " -> " << NAT.at(ip_part) << endl;
       else if (NAT.find(port_part) != NAT.end())
-        output_stream << full_key << "->" << NAT.at(port_part) << endl;
+        output_stream << full_key << " -> " << NAT.at(port_part) << endl;
       else
         output_stream << "No nat match for " << full_key << endl;
     }
