@@ -7,6 +7,8 @@ To run the program:
 4) Compile the program using the command "g++ -o main main.cpp"
 5) Run the program using the command "main <nat_file_name> <flow_file_name>". Example "main NAT.txt FLOW.txt"
 
+A new file named OUTPUT will be created in the directory containing the output. 
+
 NOTE: Include file formats in the file names. 
 
 If I had more time, I would have 
