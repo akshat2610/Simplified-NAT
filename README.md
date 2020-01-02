@@ -3,7 +3,7 @@
 To run the program:
 1) Download the zip.
 2) Extract it.
-3) Copy the nat and flow input files in this extracted directory.
+3) Copy the nat and flow input files in this extracted directory and navigate to this directory in the command line.
 4) Compile the program using the command "g++ -o main main.cpp"
 5) Run the program using the command "main <nat_file_name> <flow_file_name>". Example "main NAT.txt FLOW.txt"
 
